@@ -45,8 +45,7 @@ class MainActivity : ComponentActivity() {
                                     defaultValue = ""
                                 }
                             )
-                        ){ navBackStack ->
-                            val coinId = navBackStack.arguments?.getString("coinId")?:""
+                        ){ _ ->
                             CoinDetailsScreen()
                         }
                     }

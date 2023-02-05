@@ -44,7 +44,7 @@ fun CoinDetailsScreen(
                         )
                         Text(
                             text = if(it.isActive == true)"active" else "inactive",
-                            color = if(it?.isActive == true) Color.Green else Color.Red,
+                            color = if(it.isActive == true) Color.Green else Color.Red,
                             fontStyle = FontStyle.Italic,
                             textAlign = TextAlign.End,
                             style = MaterialTheme.typography.body2,
@@ -68,7 +68,7 @@ fun CoinDetailsScreen(
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         it.tags?.forEach { tag ->
-                            CoinTag(tag = tag?.name ?: "")
+                            CoinTag(tag = tag.name ?: "")
                         }
                     }
                     Spacer(modifier = Modifier.height(10.dp))

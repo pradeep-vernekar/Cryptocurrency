@@ -28,7 +28,8 @@ object ApplicationModule {
     @Provides
     fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor) =
         OkHttpClient.Builder()
-        .build()
+            .addInterceptor(loggingInterceptor)
+            .build()
 
     @Singleton
     @Provides
