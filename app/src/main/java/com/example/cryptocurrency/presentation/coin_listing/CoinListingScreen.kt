@@ -1,6 +1,5 @@
 package com.example.cryptocurrency.presentation.coin_listing
 
-import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -24,7 +23,7 @@ fun CoinListingScreen(
     viewModel:CoinListingViewModel = hiltViewModel(),
     navController: NavController
 ){
-    val viewState = viewModel.uiState.collectAsState()
+       val viewState = viewModel.uiState.collectAsState()
        Box(modifier = Modifier.fillMaxSize()) {
            LazyColumn(modifier = Modifier.fillMaxSize()){
                items(items = viewState.value.coins){ coin ->
